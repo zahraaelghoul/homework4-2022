@@ -1,0 +1,167 @@
+body {
+    font-family: Poppins, serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/* a:link {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+  
+a:active {
+    color: inherit;
+}
+
+a:focus {
+    color: inherit;
+} */
+
+.card > header {
+    background: #288088;
+    border: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex-basis: 450px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.gallery img {
+    border: solid 10px #50C7C7; 
+    margin: 10px;
+    width: 300px;
+}
+
+@keyframes logo {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation-name: logo;
+    animation-duration: 5s;
+}
+
+@media only screen and (min-width: 900px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav_links {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* flex-direction: column;
+        align-items: center; */
+    }
+
+    .pricing {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        /* flex-shrink: 5; */
+    }
+
+    .card {
+        flex-basis: 250px;
+    }
+
+    body > header {
+        position: sticky;
+        top: 0;
+    }
+} 
+
+@media only screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+@media print {
+
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: column;
+        align-items: center; */
+        justify-content: space-between;
+    }
+
+    .pricing {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .card {
+        flex-basis: 325px;
+        border: solid 2px #45ADDD;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .card li:nth-child(2):after {
+        content: "\1F44D";
+      }
+  
+  }
